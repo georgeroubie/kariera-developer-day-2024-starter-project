@@ -1,0 +1,9 @@
+.wrapper {
+  max-width: var(--app-max-width);
+  margin: 0 auto;
+  background-color: var(--color-surface);
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  padding: var(--spacing-large) var(--spacing-normal);
+}
