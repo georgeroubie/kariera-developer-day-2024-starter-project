@@ -1,4 +1,6 @@
 import { useRef, useState } from 'react';
+import { api } from '../../../api/calls';
+import { PokemonDataResponse } from '../../../api/types';
 import Button from '../../shared/button/Button';
 import PokemonFinderTerms from '../pokemon-finder-terms-modal/PokemonFinderTermsModal';
 import styles from './SearchPokemonForm.module.css';
@@ -10,10 +12,14 @@ const MIN_CHARACTERS = 3;
 const SearchPokemonForm = () => {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
   const [pokemonName, setPokemonName] = useState('');
   const [acceptTerms, setAcceptTerms] = useState(false);
+  const [pokemonData, setPokemonData] = useState<PokemonDataResponse | null>(null);
 
-  const isButtonDisabled = !acceptTerms;
+  const isButtonDisabled = !acceptTerms || isLoading;
 
   const showTerms = (ev: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
     ev.preventDefault();
@@ -23,6 +29,20 @@ const SearchPokemonForm = () => {
 
   const handleOnSubmit = (ev: React.FormEvent<HTMLFormElement>) => {
     ev.preventDefault();
+
+    if (isLoading) {
+      return;
+    }
+
+    setIsLoading(true);
+    setPokemonData(null);
+    setHasError(false);
+
+    api
+      .getPokemonData(pokemonName)
+      .then((data) => setPokemonData(data))
+      .catch(() => setHasError(true))
+      .finally(() => setIsLoading(false));
   };
 
   const handleOnAccept = () => {
