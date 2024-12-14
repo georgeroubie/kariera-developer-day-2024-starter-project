@@ -4,11 +4,13 @@ import { PokemonDataResponse } from '../../../api/types';
 import Button from '../../shared/button/Button';
 import PokemonDetails from '../pokemon-details/PokemonDetails';
 import PokemonFinderTerms from '../pokemon-finder-terms-modal/PokemonFinderTermsModal';
+import PokemonNamesDataList from '../pokemon-names-data-list/PokemonNamesDataList';
 import styles from './SearchPokemonForm.module.css';
 
 const INPUT_ID = 'pokemon_name_input';
 const CHECKBOX_ID = 'accept_terms_checkbox';
 const MIN_CHARACTERS = 3;
+const LIST_ID = 'pokemon_name_list';
 
 const SearchPokemonForm = () => {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -61,6 +63,7 @@ const SearchPokemonForm = () => {
       <form className={styles.form} onSubmit={handleOnSubmit}>
         <input
           id={INPUT_ID}
+          list={LIST_ID}
           value={pokemonName}
           disabled={isLoading}
           type="text"
@@ -71,6 +74,7 @@ const SearchPokemonForm = () => {
           className={styles.input}
           onChange={(e) => setPokemonName(e.target.value)}
         />
+        <PokemonNamesDataList id={LIST_ID} />
         <p className={styles.errorMessage}>Pokemon name must be at least {MIN_CHARACTERS} characters long.</p>
         <div className={styles.checkboxWrapper}>
           <input
