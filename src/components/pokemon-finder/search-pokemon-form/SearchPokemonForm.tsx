@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { api } from '../../../api/calls';
 import { PokemonDataResponse } from '../../../api/types';
 import Button from '../../shared/button/Button';
+import PokemonDetails from '../pokemon-details/PokemonDetails';
 import PokemonFinderTerms from '../pokemon-finder-terms-modal/PokemonFinderTermsModal';
 import styles from './SearchPokemonForm.module.css';
 
@@ -61,6 +62,7 @@ const SearchPokemonForm = () => {
         <input
           id={INPUT_ID}
           value={pokemonName}
+          disabled={isLoading}
           type="text"
           autoComplete="off"
           placeholder="Search for a Pokemon..."
@@ -75,6 +77,7 @@ const SearchPokemonForm = () => {
             type="checkbox"
             id={CHECKBOX_ID}
             name={CHECKBOX_ID}
+            disabled={isLoading}
             checked={acceptTerms}
             onChange={({ target }) => setAcceptTerms(target.checked)}
           />
@@ -86,6 +89,7 @@ const SearchPokemonForm = () => {
         <Button disabled={isButtonDisabled}>Search</Button>
       </form>
       <PokemonFinderTerms dialogRef={dialogRef} onAccept={handleOnAccept} onDecline={handleOnDecline} />
+      <PokemonDetails pokemonData={pokemonData} isLoading={isLoading} hasError={hasError} />
     </>
   );
 };

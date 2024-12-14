@@ -1,0 +1,25 @@
+.error {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-error-primary);
+}
+
+.loading {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-success-primary);
+}
+
+.pokemon {
+  border-radius: var(--shape-rounded-normal);
+  border: 2px solid var(--color-border-primary);
+  padding: var(--spacing-normal) var(--spacing-large);
+  margin-block-end: var(--spacing-normal);
+  display: flex;
+  gap: var(--spacing-normal);
+  align-items: center;
+
+  .name,
+  .types {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+  }
+}
