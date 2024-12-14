@@ -10,6 +10,11 @@
   gap: var(--spacing-normal);
 }
 
+.errorMessage {
+  display: none;
+  color: var(--color-error-primary);
+}
+
 .input {
   padding: var(--spacing-normal) var(--spacing-large);
   font-size: var(--font-size-normal);
@@ -21,6 +26,22 @@
   border: 1px solid var(--color-border-primary);
   outline: 0;
   width: 100%;
+
+  &:user-invalid {
+    border: 1px solid var(--color-error-primary);
+
+    &:required + .errorMessage {
+      display: block;
+    }
+  }
+
+  &::placeholder {
+    color: var(--color-text-secondary);
+  }
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 .checkboxWrapper {
