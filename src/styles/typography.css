@@ -1,0 +1,18 @@
+body {
+  /*
+    Smooth the font on the level of the pixel, as opposed to the subpixel.
+    Switching from subpixel rendering to anti-aliasing for light text on dark backgrounds makes it look lighter.
+  */
+  -webkit-font-smoothing: antialiased; /* Webkit */
+  -moz-osx-font-smoothing: grayscale; /* Firefox */
+
+  /* The browser will modify the shape of glyphs for optimal viewing. */
+  font-optical-sizing: auto;
+
+  font-family: var(--font-family);
+  font-size: var(--font-size-normal);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--font-letter-spacing);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-normal);
+}

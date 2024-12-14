@@ -1,0 +1,37 @@
+:root {
+  --app-max-width: 750px;
+
+  --font-family: Arial, sans-serif;
+
+  --font-size-small: 0.85rem;
+  --font-size-normal: 1rem;
+  --font-size-large: 1.8rem;
+  --font-size-xlarge: 2.3rem;
+
+  --font-letter-spacing: 0.05rem;
+
+  --line-height-small: 1.1rem;
+  --line-height-normal: 1.4rem;
+  --line-height-large: 2.5rem;
+  --line-height-xlarge: 2.8rem;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  --shape-rounded-normal: 8px;
+
+  --spacing-small: 0.5rem;
+  --spacing-normal: 1rem;
+  --spacing-large: 1.5rem;
+
+  --color-theme-one: hsl(203, 100%, 37%);
+  --color-theme-two: hsl(48, 100%, 50%);
+  --color-backdrop: hsl(0, 0, 8%);
+  --color-background: hsl(0, 0%, 96%);
+  --color-surface: hsl(0, 0%, 100%);
+  --color-border-primary: hsl(0, 0%, 67%);
+  --color-text-primary: hsl(0, 0%, 8%);
+  --color-text-secondary: hsl(0, 0%, 44%);
+  --color-success-primary: hsl(164, 100%, 35%);
+  --color-error-primary: hsl(0, 84%, 47%);
+}
