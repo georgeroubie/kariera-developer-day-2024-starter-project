@@ -1,0 +1,7 @@
+.subtitle {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-large);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-secondary);
+  margin-block-end: var(--spacing-normal);
+}
