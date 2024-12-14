@@ -8,7 +8,7 @@ const PokemonFinder = () => {
     <>
       <PageTitle pageTitle="Home" />
       <SubTitle>Search your favorite Pokemon here!</SubTitle>
-      <Accordion items={FAQ} />
+      <Accordion items={FAQ} name="faq" />
     </>
   );
 };
