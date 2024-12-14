@@ -1,0 +1,43 @@
+.form {
+  margin-block: var(--spacing-large);
+  background-color: var(--color-background);
+  border-radius: var(--shape-rounded-normal);
+  border: 2px solid var(--color-border-primary);
+  padding: var(--spacing-normal) var(--spacing-large);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-normal);
+}
+
+.input {
+  padding: var(--spacing-normal) var(--spacing-large);
+  font-size: var(--font-size-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  border-radius: var(--shape-rounded-normal);
+  flex: 1;
+  border: 1px solid var(--color-border-primary);
+  outline: 0;
+  width: 100%;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+
+  input {
+    accent-color: var(--color-theme-one);
+  }
+
+  label {
+    font-size: var(--font-size-small);
+    cursor: pointer;
+
+    span:hover {
+      text-decoration: underline;
+    }
+  }
+}
