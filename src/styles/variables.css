@@ -24,14 +24,53 @@
   --spacing-normal: 1rem;
   --spacing-large: 1.5rem;
 
+  --color-theme-one-h: 203;
+  --color-theme-one-s: 100%;
+  --color-theme-one-l: 37%;
   --color-theme-one: hsl(203, 100%, 37%);
+
+  --color-theme-two-h: 48;
+  --color-theme-two-s: 100%;
+  --color-theme-two-l: 50%;
   --color-theme-two: hsl(48, 100%, 50%);
+
+  --color-backdrop-h: 0;
+  --color-backdrop-s: 0;
+  --color-backdrop-l: 8%;
   --color-backdrop: hsl(0, 0, 8%);
+
+  --color-background-h: 0;
+  --color-background-s: 0%;
+  --color-background-l: 96%;
   --color-background: hsl(0, 0%, 96%);
+
+  --color-surface-h: 0;
+  --color-surface-s: 0%;
+  --color-surface-l: 100%;
   --color-surface: hsl(0, 0%, 100%);
+
+  --color-border-primary-h: 0;
+  --color-border-primary-s: 0%;
+  --color-border-primary-l: 67%;
   --color-border-primary: hsl(0, 0%, 67%);
+
+  --color-text-primary-h: 0;
+  --color-text-primary-s: 0%;
+  --color-text-primary-l: 8%;
   --color-text-primary: hsl(0, 0%, 8%);
+
+  --color-text-secondary-h: 0;
+  --color-text-secondary-s: 0%;
+  --color-text-secondary-l: 44%;
   --color-text-secondary: hsl(0, 0%, 44%);
+
+  --color-success-primary-h: 164;
+  --color-success-primary-s: 100%;
+  --color-success-primary-l: 35%;
   --color-success-primary: hsl(164, 100%, 35%);
+
+  --color-error-primary-h: 0;
+  --color-error-primary-s: 84%;
+  --color-error-primary-l: 47%;
   --color-error-primary: hsl(0, 84%, 47%);
 }
