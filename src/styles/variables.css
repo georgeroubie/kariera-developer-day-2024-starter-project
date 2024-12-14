@@ -74,3 +74,47 @@
   --color-error-primary-l: 47%;
   --color-error-primary: hsl(0, 84%, 47%);
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-backdrop-h: 0;
+    --color-backdrop-s: 0%;
+    --color-backdrop-l: 9%;
+    --color-backdrop: hsl(0, 0%, 9%);
+
+    --color-background-h: 0;
+    --color-background-s: 0%;
+    --color-background-l: 9%;
+    --color-background: hsl(0, 0%, 9%);
+
+    --color-surface-h: 0;
+    --color-surface-s: 0%;
+    --color-surface-l: 13%;
+    --color-surface: hsl(0, 0%, 13%);
+
+    --color-border-primary-h: 0;
+    --color-border-primary-s: 0%;
+    --color-border-primary-l: 87%;
+    --color-border-primary: hsl(0, 0%, 87%);
+
+    --color-text-primary-h: 0;
+    --color-text-primary-s: 0%;
+    --color-text-primary-l: 87%;
+    --color-text-primary: hsl(0, 0%, 87%);
+
+    --color-text-secondary-h: 0;
+    --color-text-secondary-s: 0%;
+    --color-text-secondary-l: 61%;
+    --color-text-secondary: hsl(0, 0%, 61%);
+
+    --color-success-primary-h: 164;
+    --color-success-primary-s: 100%;
+    --color-success-primary-l: 37%;
+    --color-success-primary: hsl(164, 100%, 37%);
+
+    --color-error-primary-h: 356;
+    --color-error-primary-s: 100%;
+    --color-error-primary-l: 69%;
+    --color-error-primary: hsl(356, 100%, 69%);
+  }
+}
