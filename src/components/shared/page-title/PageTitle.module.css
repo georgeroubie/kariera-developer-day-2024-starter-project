@@ -1,0 +1,9 @@
+.title {
+  font-size: var(--font-size-xlarge);
+  line-height: var(--line-height-xlarge);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-theme-two);
+  -webkit-text-stroke: 0.1rem var(--color-theme-one);
+  font-style: italic;
+  margin-block-end: var(--spacing-normal);
+}
